@@ -13,7 +13,7 @@ request.get(quoteUrl, function(err, res, data) {
   }
 
   var quote = JSON.parse(data);
-  var quoteText = quote.author ? format("{text} - {author}", quote) : text;
+  var quoteText = quote.author ? format("{text} - {author}", quote) : quote.text;
 
   var hipchatter = new Hipchatter(hipchatAuthToken);
   hipchatter.notify(roomName, { message: quoteText, color: 'green', token: hipchatRoomToken }, 
