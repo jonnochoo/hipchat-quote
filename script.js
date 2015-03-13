@@ -1,7 +1,7 @@
 var request = require('request');
 var format = require('string-template');
 var Hipchatter = require('hipchatter');
-var quoteUrl = 'http://quotes.jonnochoo.com/api/quotes/random';
+var quoteUrl = 'http://quotes-api.jonnochoo.com/api/quotes/random';
 
 var roomName = process.argv[2];
 var hipchatAuthToken = process.argv[3];
