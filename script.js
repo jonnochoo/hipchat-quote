@@ -16,7 +16,7 @@ request.get(quoteUrl, function(err, res, data) {
   var quoteText = quote.author ? format("{text} - {author}", quote) : quote.text;
 
   var hipchatter = new Hipchatter(hipchatAuthToken);
-  hipchatter.notify(roomName, { message: quoteText, color: 'green', token: hipchatRoomToken }, 
+  hipchatter.notify(roomName, { message: quoteText, color: 'green', token: hipchatRoomToken, notify: true }, 
     function(err){
       if(err)
         console.log(err);
